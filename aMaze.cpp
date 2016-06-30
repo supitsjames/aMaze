@@ -23,6 +23,13 @@ vector<Cell> aMaze::getVec(){
 
 void aMaze::init(){
 	vec.resize(numCells); 
+	Cell current = vec.front();
+	
+	for(int i=0;i<numCells;i++){
+	
+		
+	
+	}	
 }
 
 int main(){	
