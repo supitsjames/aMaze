@@ -8,7 +8,7 @@ Cell::Cell(){
 	visited = false;
 };
 
-Cell:getWall(int i){
+bool Cell::getWall(int i){
 	switch(i){
 		case 0:
 			return up;

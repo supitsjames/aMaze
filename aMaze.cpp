@@ -1,42 +1,45 @@
 #include "header.h"
 #include "Cell.cpp"
-#include <vector>
-#include <math.h>
 
-class aMaze{
-private:
-	int numCells;
-	vector<Cell> vec;
-public:
-	aMaze(int);
-	vector<Cell> getVec();
-	void init();
-};
+aMaze::aMaze(int i){
 
-aMaze::aMaze(int s){
-	numCells = pow(s,2);
+	int numCells = pow(i,2);	
+	vec.resize(numCells); 
+	
 }
 
 vector<Cell> aMaze::getVec(){
 	return vec;
 }
 
-bool aMaze::checkCell(int i){
-	if(i >=0){
-		
+bool aMaze::checkCell(int d, int index){
+	int row = sqrt(numCells);
+	if(d==0 && d - row >= 0){
+		return true;
 	}
+	if(d==1 && d + row < numCells){
+		return true;
+	}
+	if(d==2 && (d-1) % row != 0){
+		return true;
+	}	
+	if(d==3 && (d+1) % row != 1){
+		return true;
+	}
+	return false;
 }
 
 void aMaze::init(){
-	vec.resize(numCells); 
 	Cell current = vec.front();
+	int index =0;
 	
 	for(int i=0;i<numCells;i++){
 		int gen = rand() % 4;
-		switch(gen){
+/*		switch(gen){
 			case 0:
 				if
 		}
+*/		cout << gen << endl;
 	}	
 }
 
