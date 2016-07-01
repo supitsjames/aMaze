@@ -21,14 +21,22 @@ vector<Cell> aMaze::getVec(){
 	return vec;
 }
 
+bool aMaze::checkCell(int i){
+	if(i >=0){
+		
+	}
+}
+
 void aMaze::init(){
 	vec.resize(numCells); 
 	Cell current = vec.front();
 	
 	for(int i=0;i<numCells;i++){
-	
-		
-	
+		int gen = rand() % 4;
+		switch(gen){
+			case 0:
+				if
+		}
 	}	
 }
 
